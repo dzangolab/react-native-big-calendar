@@ -106,9 +106,9 @@ function _CalendarBody<T extends ICalendarEventBase>({
     [onPressCell],
   )
 
-  const _renderMappedEvent = (event: T) => (
+  const _renderMappedEvent = (event: T, index: number) => (
     <CalendarEvent
-      key={`${event.start}${event.title}${event.end}`}
+      key={`${event.start}${index}`}
       event={event}
       onPressEvent={onPressEvent}
       eventCellStyle={eventCellStyle}
